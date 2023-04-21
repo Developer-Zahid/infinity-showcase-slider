@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+    <title>Infinity Showcase Slider | CSS Only</title>
+    <meta name="author" content="Developer Zahid | Zahid Hasan Munna">
+    <meta name="title" content="Infinity Showcase Slider | CSS Only">
+    <meta name="description" content="This is a CSS based infinity slider. When a user hover on title, then slider start sliding infinity times with there category images. My name is Zahid Hasan Munna. I'm a Front-End Developer. I created this Infinity Showcase Slider with only CSS">
+    <meta name="keywords" content="css, CSS, css3, CSS3, frontend developer, frontend designer, web designer, developer, designer, dev-z">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://infinity-showcase-slider.netlify.app">
+    <meta property="og:title" content="Infinity Showcase Slider | CSS Only">
+    <meta property="og:description" content="This is a CSS based infinity slider. When a user hover on title, then slider start sliding infinity times with there category images. My name is Zahid Hasan Munna. I'm a Front-End Developer. I created this Infinity Showcase Slider with only CSS">
+    <meta property="og:image" content="https://infinity-showcase-slider.netlify.app/assets/images/og/og-images.jpg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://infinity-showcase-slider.netlify.app">
+    <meta property="twitter:title" content="Infinity Showcase Slider | CSS Only">
+    <meta property="twitter:description" content="This is a CSS based infinity slider. When a user hover on title, then slider start sliding infinity times with there category images. My name is Zahid Hasan Munna. I'm a Front-End Developer. I created this Infinity Showcase Slider with only CSS">
+    <meta property="twitter:image" content="https://infinity-showcase-slider.netlify.app/assets/images/og/og-images.jpg">
+
+    <!-- Favicon Link -->
+	<link rel="icon" type="image/png" sizes="512x512" href="./assets/images/favicon/android-chrome-512x512.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="./assets/images/favicon/android-chrome-192x192.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+	<link rel="icon" type="image/x-icon" href="./assets/images/favicon/favicon.ico">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <section class="banner">
+        <button type="button" data-target="slide-1" class="banner__text" style="--total-letter: 6">
+            <span class="banner__text__letter" data-text="s" style="--index: 0">s</span>
+            <span class="banner__text__letter" data-text="p" style="--index: 1">p</span>
+            <span class="banner__text__letter" data-text="o" style="--index: 2">o</span>
+            <span class="banner__text__letter" data-text="r" style="--index: 3">r</span>
+            <span class="banner__text__letter" data-text="t" style="--index: 4">t</span>
+            <span class="banner__text__letter" data-text="s" style="--index: 5">s</span>
+        </button>
+        <button type="button" data-target="slide-2" class="banner__text" style="--total-letter: 5">
+            <span class="banner__text__letter" data-text="m" style="--index: 0">m</span>
+            <span class="banner__text__letter" data-text="u" style="--index: 1">u</span>
+            <span class="banner__text__letter" data-text="s" style="--index: 2">s</span>
+            <span class="banner__text__letter" data-text="i" style="--index: 3">i</span>
+            <span class="banner__text__letter" data-text="c" style="--index: 4">c</span>
+        </button>
+        <button type="button" data-target="slide-3" class="banner__text" style="--total-letter: 3">
+            <span class="banner__text__letter" data-text="g" style="--index: 0">g</span>
+            <span class="banner__text__letter" data-text="y" style="--index: 1">y</span>
+            <span class="banner__text__letter" data-text="m" style="--index: 2">m</span>
+        </button>
+        <div class="banner__slider banner__slider--before">
+            <div class="banner__slide" style="--total-item: 10;">
+                <img src="https://source.unsplash.com/random/1080x675/?sport&10" alt="Showcase" loading="lazy" style="--index: 10;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?music&9" alt="Showcase" loading="lazy" style="--index: 9;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?gym&8" alt="Showcase" loading="lazy" style="--index: 8;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?sport&7" alt="Showcase" loading="lazy" style="--index: 7;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?music&6" alt="Showcase" loading="lazy" style="--index: 6;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?gym&5" alt="Showcase" loading="lazy" style="--index: 5;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?sport&4" alt="Showcase" loading="lazy" style="--index: 4;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?music&3" alt="Showcase" loading="lazy" style="--index: 3;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?sport&2" alt="Showcase" loading="lazy" style="--index: 2;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?gym&1" alt="Showcase" loading="lazy" style="--index: 1;" class="banner__slide__image">
+            </div>
+        </div>
+        <div class="banner__slider banner__slider--after">
+            <div class="banner__slide" data-slide="slide-1" style="--total-item: 10;">
+                <img src="https://source.unsplash.com/random/1080x675/?sport&10" alt="Showcase" loading="lazy" style="--index: 10;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?sport&9" alt="Showcase" loading="lazy" style="--index: 9;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?sport&8" alt="Showcase" loading="lazy" style="--index: 8;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?sport&7" alt="Showcase" loading="lazy" style="--index: 7;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?sport&6" alt="Showcase" loading="lazy" style="--index: 6;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?sport&5" alt="Showcase" loading="lazy" style="--index: 5;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?sport&4" alt="Showcase" loading="lazy" style="--index: 4;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?sport&3" alt="Showcase" loading="lazy" style="--index: 3;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?sport&2" alt="Showcase" loading="lazy" style="--index: 2;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?sport&1" alt="Showcase" loading="lazy" style="--index: 1;" class="banner__slide__image">
+            </div>
+            <div class="banner__slide" data-slide="slide-2" style="--total-item: 10;">
+                <img src="https://source.unsplash.com/random/1080x675/?music&10" alt="Showcase" loading="lazy" style="--index: 10;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?music&9" alt="Showcase" loading="lazy" style="--index: 9;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?music&8" alt="Showcase" loading="lazy" style="--index: 8;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?music&7" alt="Showcase" loading="lazy" style="--index: 7;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?music&6" alt="Showcase" loading="lazy" style="--index: 6;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?music&5" alt="Showcase" loading="lazy" style="--index: 5;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?music&4" alt="Showcase" loading="lazy" style="--index: 4;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?music&3" alt="Showcase" loading="lazy" style="--index: 3;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?music&2" alt="Showcase" loading="lazy" style="--index: 2;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?music&1" alt="Showcase" loading="lazy" style="--index: 1;" class="banner__slide__image">
+            </div>
+            <div class="banner__slide" data-slide="slide-3" style="--total-item: 10;">
+                <img src="https://source.unsplash.com/random/1080x675/?gym&10" alt="Showcase" loading="lazy" style="--index: 10;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?gym&9" alt="Showcase" loading="lazy" style="--index: 9;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?gym&8" alt="Showcase" loading="lazy" style="--index: 8;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?gym&7" alt="Showcase" loading="lazy" style="--index: 7;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?gym&6" alt="Showcase" loading="lazy" style="--index: 6;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?gym&5" alt="Showcase" loading="lazy" style="--index: 5;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?gym&4" alt="Showcase" loading="lazy" style="--index: 4;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?gym&3" alt="Showcase" loading="lazy" style="--index: 3;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?gym&2" alt="Showcase" loading="lazy" style="--index: 2;" class="banner__slide__image">
+                <img src="https://source.unsplash.com/random/1080x675/?gym&1" alt="Showcase" loading="lazy" style="--index: 1;" class="banner__slide__image">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

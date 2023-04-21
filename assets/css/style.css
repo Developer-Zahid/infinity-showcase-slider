@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body
+{
+    height: 100%;
+}
+
+html{
+    font-size: clamp(6px, 1vw, 10px);
+}
+
+.banner,
+.banner__slider,
+.banner__slide
+{
+    height: inherit;
+}
+
+.banner,
+.banner__text
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner{
+    gap: 5em;
+    flex-wrap: wrap;
+    background-color: #000000;
+    isolation: isolate;
+}
+
+@media (max-width: 1199.98px) {
+    .banner{
+        flex-direction: column;
+    }
+}
+
+.banner__text{
+    background-color: transparent;
+    text-transform: uppercase;
+    border: 0;
+    font-size: 10rem;
+    font-style: italic;
+    cursor: pointer;
+    line-height: 1;
+    overflow: hidden;
+    padding-inline-end: 0.3em;
+}
+
+.banner__text__letter,
+.banner__text__letter::after
+{
+    user-select: none;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: calc((var(--total-letter) - var(--index)) * 0.05s);
+}
+
+.banner__text__letter{
+    position: relative;
+    color: #ffffff;
+}
+
+.banner__text__letter::after{
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    transform: translateY(100%);
+    opacity: 0;
+    -webkit-text-stroke: solid;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-fill-color: transparent;
+    text-stroke: solid;
+    text-stroke-width: 3px;
+    text-stroke-color: #ffffff;
+    text-fill-color: transparent;
+}
+
+@media (max-width: 767.98px) {
+    .banner__text__letter::after{
+        -webkit-text-stroke-width: 2px;
+        text-stroke-width: 2px;
+    }
+}
+
+.banner__text:is(:hover, :active, :focus-visible) .banner__text__letter,
+.banner__text:is(:hover, :active, :focus-visible) .banner__text__letter::after
+{
+    transition-delay: calc(var(--index) * 0.05s);
+}
+
+.banner__text:is(:hover, :active, :focus-visible) .banner__text__letter{
+    transform: translateY(-100%);
+    color: transparent;
+}
+
+.banner__text:is(:hover, :active, :focus-visible) .banner__text__letter::after{
+    opacity: 1;
+}
+
+.banner__slider,
+.banner__slide,
+.banner__slide__image
+{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banner__slider{
+    overflow: hidden;
+    z-index: -1;
+}
+
+.banner__slider--after .banner__slide{
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-target="slide-1"]:is(:hover, :active, :focus-visible) ~ .banner__slider [data-slide="slide-1"]{
+    opacity: 1;
+}
+
+[data-target="slide-2"]:is(:hover, :active, :focus-visible) ~ .banner__slider [data-slide="slide-2"]{
+    opacity: 1;
+}
+
+[data-target="slide-3"]:is(:hover, :active, :focus-visible) ~ .banner__slider [data-slide="slide-3"]{
+    opacity: 1;
+}
+
+.banner__slide::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    background: radial-gradient(circle, rgba(0,0,0,.3) 0%, rgba(0,0,0,1) 150%);
+    z-index: 99;
+}
+
+.banner__slide__image{
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+    user-select: none;
+    z-index: var(--index);
+}
+
+.banner__slider--before .banner__slide__image{
+    --custom-delay: 2s;
+    filter: grayscale(100%);
+    animation: slowSlide linear infinite;
+    animation-duration: calc(var(--total-item) * var(--custom-delay));
+    animation-delay: calc((var(--total-item) - var(--index) - 1) * var(--custom-delay));
+}
+
+@keyframes slowSlide {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+      }
+      2%, 15.3% {
+        opacity: 1;
+      }
+      17.3% {
+        opacity: 0;
+        transform: scale(1.1);
+      }
+      18%, 100% {
+        opacity: 0;
+        transform: scale(1);
+      }
+}
+
+.banner__slider--after .banner__slide__image{
+    --custom-delay: 0.1s;
+    animation: fastSlide  linear infinite;
+    animation-duration: calc(var(--total-item) * var(--custom-delay));
+    animation-delay: calc((var(--total-item) - var(--index) - 1) * var(--custom-delay));
+}
+
+@keyframes fastSlide {
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    10%{
+        opacity: 1;
+        transform: scale(1.03);
+    }
+    11%{
+        opacity: 0;
+        transform: scale(1.03);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1);
+    }
+}
